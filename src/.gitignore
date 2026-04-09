@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+build/
+target/
+.iml
+.iws
+*.jar
+*.log
+.war
+.ear
+.env
+application-local.properties
