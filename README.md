@@ -1,18 +1,97 @@
-## Getting Started
+ ### Gerador de Senhas/Password Generator
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+É uma API desenvolvida em Java (Swing) para geração de senhas seguras e armazenamento em banco de dados totalmente academico.
+**OBS:**Futuramente todas as anotações no projeto estarão em ingles para pratica  
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+##  Funcionalidades
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+*  Geração de senhas aleatórias
+*  Personalização no suário/site
+  * Letras minúsculas
+  * Letras maiúsculas
+  * Números
+  * Símbolos
+*  Salvamento de usuários e senhas no banco de dados (MySQL)
+*  Navegação entre telas
+*  Interface gráfica simples e funcional
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+##  Tecnologias utilizadas
 
-## Dependency Management
+* Java 
+* MySQL
+* JDBC (MySQL Connector/J)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+##  Como executar
+
+### 1. Clonar o repositório
+
+```bash
+git https://github.com/BrenoSantos014/PasswordGenerator.git
+```
+
+### 2. Configurar o banco de dados
+
+```sql
+CREATE DATABASE history_data_base;
+
+USE history_data_base;
+
+CREATE TABLE history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100),
+    user_password VARCHAR(100)
+);
+
+---
+
+### 3. Configurar conexão no Java
+
+No arquivo 'Account.java', ajuste:
+
+```java
+String url = "jdbc:mysql://localhost:3306/history_data_base";
+String username = "root";
+String password = "SUA_SENHA";
+```
+
+---
+
+### 4. Executar o projeto
+
+Para executar o projeto, Recomenda-se abrir o IntelliJ e rode a classe principal.
+
+---
+
+## Versões
+
+* v1.0 → Estrutura inicial
+* v1.1 → Integração com banco de dados e melhoria na navegação entre as telas
+
+---
+
+## Melhorias futuras
+
+*  Criptografia de senha
+*  Optimização do projeto
+*  Melhorias na interface gráfica
+*  Personalizaçao completa no usuário/site e senha
+*  Sistema de login/senha
+
+---
+
+## Autor
+
+Desenvolvido por **Breno Manoel**
+
+---
+
+## Contribuição
+
+Sinta-se livre para contribuir ou sugerir melhorias
+
