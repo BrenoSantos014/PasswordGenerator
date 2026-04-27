@@ -10,3 +10,12 @@ target/
 .ear
 .env
 application-local.properties
+/.gitignore
+/Account.class
+/App.class
+/DatabaseConnection.class
+/HistoryPage.class
+/PasswordGenerator.class
+/PasswordGeneratorGUI$1.class
+/PasswordGeneratorGUI$2.class
+/PasswordGeneratorGUI.class

@@ -1,7 +1,7 @@
  ### Gerador de Senhas/Password Generator
 
 É uma API desenvolvida em Java (Swing) para geração de senhas seguras e armazenamento em banco de dados totalmente academico.
-**OBS:**Futuramente todas as anotações no projeto estarão em ingles para pratica  
+**OBS:**Futuramente todas as anotações no projeto estarão em ingles para pratica.
 
 ---
 
@@ -56,8 +56,7 @@ No arquivo 'Account.java', ajuste:
 
 ```java
 String url = "jdbc:mysql://localhost:3306/history_data_base";
-String username = "root";
-String password = "SUA_SENHA";
+
 ```
 
 ---
@@ -70,19 +69,17 @@ Para executar o projeto, Recomenda-se abrir o IntelliJ e rode a classe principal
 
 ## Versões
 
-* v1.0 → Estrutura inicial
-* v1.1 → Integração com banco de dados e melhoria na navegação entre as telas
-
+* v1.0 → Estrutura inicial.
+* v1.1 → Integração com banco de dados e melhoria na navegação entre as telas.
+* v1.2 → Criar a tabela do histórico.
 ---
 
 ## Melhorias futuras
 
-*  Criptografia de senha
-*  Optimização do projeto
-*  Melhorias na interface gráfica
+*  Optimização do projeto.
+*  Melhorias na interface gráfica.
 *  Personalizaçao completa no usuário/site e senha
-*  Sistema de login/senha
-
+.
 ---
 
 ## Autor
@@ -93,5 +90,5 @@ Desenvolvido por **Breno Manoel**
 
 ## Contribuição
 
-Sinta-se livre para contribuir ou sugerir melhorias
+Sinta-se livre para contribuir ou sugerir melhorias.
 

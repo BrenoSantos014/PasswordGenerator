@@ -6,19 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4231f51e-336b-488a-9e62-43c144b6db84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HistoryDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryDataBase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordGenerator.eml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordGenerator.userlibraries" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/Account.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/DatabaseConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/HistoryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/HistoryPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGeneratorGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGeneratorGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGeneratorGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGeneratorGUI$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGeneratorGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordGenerator/PasswordGeneratorGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HistoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HistoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordGeneratorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordGeneratorGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

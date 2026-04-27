@@ -1,55 +1,84 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class HistoryPage extends JFrame {
+    private JTable titleJTable;
+    private DefaultTableModel model;
 
     public HistoryPage() {
         setTitle("Counts");
-        //tamanho da GUI
-        setSize(580,670);
-        //previne que a GUI abra outras guias quando recarrega
+        setSize(580, 670);
         setResizable(false);
-
         setLayout(null);
-
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        //center the GUi to the screen
         setLocationRelativeTo(null);
 
+        // Tittle page
         JLabel titleLabel = new JLabel("Counts");
-        // increase the font size it bold
-        titleLabel.setFont((new Font("Dialog", Font.BOLD,32)));
-
-        //center the text to the screen
+        titleLabel.setFont(new Font("Dialog", Font.BOLD, 32));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-
-        //set x,y coordinates and width/height values
-        titleLabel.setBounds(0,10,540,39);
-;
-        // add  to GUi
+        titleLabel.setBounds(0, 10, 540, 39);
         add(titleLabel);
 
-        setVisible(true);
-
-        JLabel titleLabel2 = new JLabel("Coming soon...");
-        // increase the font size it bold
-        titleLabel2.setFont((new Font("Dialog", Font.BOLD, 32)));
-        titleLabel2.setHorizontalAlignment(SwingConstants.CENTER);
-        titleLabel2.setBounds(0,150,540,39);
-        add(titleLabel2);
-        // history button
+        // Botton back
         JToggleButton passwordGeneratorGUIToggle = new JToggleButton("Password");
-        passwordGeneratorGUIToggle.setFont(new Font("Dialog", Font.PLAIN,26));
-        passwordGeneratorGUIToggle.setBounds(25,90,225,56);
+        passwordGeneratorGUIToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
+        passwordGeneratorGUIToggle.setBounds(25, 80, 225, 56);
         passwordGeneratorGUIToggle.addActionListener(e -> {
-            new PasswordGeneratorGUI(); // abre a outra página
-            dispose();// fecha a atual
+            new PasswordGeneratorGUI().setVisible(true);
+            dispose();
         });
         add(passwordGeneratorGUIToggle);
+
+        // Config the table
+        String[] colun = {"ID", "Title", "Password"};
+        model = new DefaultTableModel(colun, 0);
+
+        titleJTable = new JTable(model);
+        titleJTable.setRowHeight(25);
+        titleJTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        // the scroll line (JScrollPane)
+        JScrollPane scrollPane = new JScrollPane(titleJTable);
+        // Posicionado abaixo do botão
+        scrollPane.setBounds(25, 160, 510, 430);
+        add(scrollPane);
+
+        // Charge a bank
+        carregarDadosDoBanco();
+
         setVisible(true);
     }
-}
 
+    public void carregarDadosDoBanco() {
+        model.setNumRows(0); // Limpa a tabela antes de preencher
+
+        //The elements implanted on table
+        String sql = "SELECT id, username, user_password FROM history";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            if (conn == null) return;
+
+            while (rs.next()) {
+                // get elements in the bank
+                model.addRow(new Object[]{
+                        rs.getInt("id"),                 //Get id
+                        rs.getString("username"),       // Get username
+                        rs.getString("user_password")   // Get user_password
+                });
+            }
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Erro ao carregar dados: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
